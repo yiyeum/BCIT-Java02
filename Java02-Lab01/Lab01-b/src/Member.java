@@ -48,6 +48,8 @@ public class Member {
 	public void setFirstName(String firstName) {
 		if(firstName != null && firstName.trim().length() > 0){
 			this.firstName = firstName;
+		}else{
+			firstName = DEFAULT_NAME;
 		}
 	}
 
@@ -82,7 +84,7 @@ public class Member {
 	 * @param month the month to set
 	 */
 	public void setMonth(int month) {
-		if(month > 0){
+		if(month >= FIRST_MONTH && month <= LAST_MONTH){
 			this.month = month;
 		}
 	}
@@ -100,7 +102,7 @@ public class Member {
 	 * @param year the year to set
 	 */
 	public void setYear(int year) {
-		if(year > 0){
+		if(year > 0 && year <= CURRENT_YEAR){
 			this.year = year;
 		}
 	}
