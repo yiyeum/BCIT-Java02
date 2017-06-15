@@ -80,6 +80,15 @@ public class Dog {
 			this.age = age;
 		}
 	}
+
+	/* (non-Javadoc)
+	 * @see java.lang.Object#toString()
+	 */
+	@Override
+	public String toString() {
+		return "Dog [name=" + name + ", breed=" + breed + ", age=" + age + "]";
+	}
+	
 	
 	
 	
