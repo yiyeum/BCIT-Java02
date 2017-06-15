@@ -9,7 +9,7 @@ public class Member {
 	private int year;
 	public static final int FIRST_MONTH = 1;
 	public static final int LAST_MONTH = 12;
-	public static final int CURRENT_YEAR = 2016;
+	public static final int CURRENT_YEAR = 2017;
 	public static final String DEFAULT_NAME = "Java";
 	
 	/**
@@ -106,6 +106,16 @@ public class Member {
 			this.year = year;
 		}
 	}
+
+	/* (non-Javadoc)
+	 * @see java.lang.Object#toString()
+	 */
+	@Override
+	public String toString() {
+		return "Member [firstName=" + firstName + ", lastName=" + lastName + ", month=" + month + ", year=" + year
+				+ "]";
+	}
+	
 	
 	
 
