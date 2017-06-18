@@ -52,6 +52,11 @@ public class StudentDatabase {
 		}
 	}
 	
+	/**
+	 * Method to get the quiz array of specified student.
+	 * @param studentName The student name.
+	 * @return quiz marks in array.
+	 */
 	public int[] getQuizzes(String studentName){
 		
 		if(studentName != null && studentName.trim().length() > 1){
@@ -60,4 +65,22 @@ public class StudentDatabase {
 		} // if
 		return null;
 	}
+	
+	/**
+	 * Method to change the quiz mark.
+	 * @param studentName The student name.
+	 * @param whichQuiz The quiz which is going to changed.
+	 * @param newMark The new mark.
+	 */
+	public void changeQuizMark(String studentName, int whichQuiz, int newMark){
+		if(studentName != null && studentName.trim().length() > 0){
+			formatName(studentName);
+			if(whichQuiz >=0 && whichQuiz < quizMarks.get(studentName).length){
+				if(newMark >= MIN_GRADE && newMark <= MAX_GRADE){
+					quizMarks.get(studentName)[whichQuiz] = newMark;
+				}
+			}
+		}
+	}
+	
 }
