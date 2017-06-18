@@ -89,4 +89,14 @@ public class StudentDatabase {
 		} // else
 	} 
 	
+	/**
+	 * Method to display the quiz marks of all students in database.
+	 */
+	public void showQuizMarks(){
+		for(Entry<String, int[]> s : quizMarks.entrySet()){
+			System.out.println("Quiz marks for " + s.getKey() + " : ");
+			System.out.println(s.getValue());
+			System.out.println("");
+		}
+	}
 }
