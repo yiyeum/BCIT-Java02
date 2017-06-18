@@ -44,10 +44,9 @@ public class StudentDatabase {
 		int marks[] = new int[NUM_QUIZZES];
 		
 		if(studentName != null && studentName.trim().length() > 1){
-			formatName(studentName);
-			marks.equals(MIN_GRADE);
+			String formattedName = formatName(studentName);
 			
-			quizMarks.put(studentName, marks);
+			quizMarks.put(formattedName, marks);
 			
 		}
 	}
@@ -60,8 +59,8 @@ public class StudentDatabase {
 	public int[] getQuizzes(String studentName){
 		
 		if(studentName != null && studentName.trim().length() > 1){
-			formatName(studentName);
-			return quizMarks.get(studentName);
+			String formattedName = formatName(studentName);
+			return quizMarks.get(formattedName);
 		} // if
 		return null;
 	}
@@ -74,10 +73,11 @@ public class StudentDatabase {
 	 */
 	public void changeQuizMark(String studentName, int whichQuiz, int newMark){
 		if(studentName != null && studentName.trim().length() > 0){
-			formatName(studentName);
-			if(whichQuiz >=0 && whichQuiz < quizMarks.get(studentName).length){
+			String formattedName = formatName(studentName);
+			
+			if(whichQuiz >=0 && whichQuiz < quizMarks.get(formattedName).length){
 				if(newMark >= MIN_GRADE && newMark <= MAX_GRADE){
-					quizMarks.get(studentName)[whichQuiz] = newMark;
+					quizMarks.get(formattedName)[whichQuiz] = newMark;
 				}else{
 					System.out.println("Try again the new mark - it should be over the minimum grade, under the maximum grade.");
 				} // else
@@ -95,7 +95,10 @@ public class StudentDatabase {
 	public void showQuizMarks(){
 		for(Entry<String, int[]> s : quizMarks.entrySet()){
 			System.out.println("Quiz marks for " + s.getKey() + " : ");
-			System.out.println(s.getValue());
+			
+			for(int i = 0; i < s.getValue().length; i++){
+				System.out.print(s.getValue()[i] + " / ");
+			}
 			System.out.println("");
 		}
 	}
