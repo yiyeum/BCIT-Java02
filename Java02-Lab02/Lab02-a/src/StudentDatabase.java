@@ -35,5 +35,16 @@ public class StudentDatabase {
 		return first + rest;
 	}
 	
-
+/**
+ * Method to add student to the database, and create a new array to hold that student's quiz marks.
+ * @param studentName The student name in String.
+ */
+	public void addStudent(String studentName){
+		if(studentName != null && studentName.trim().length() > 1){
+			int marks[] = new int[NUM_QUIZZES];
+			marks.equals(MIN_GRADE);
+			quizMarks.put(studentName, marks);
+			
+		}
+	}
 }
