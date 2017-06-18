@@ -78,9 +78,15 @@ public class StudentDatabase {
 			if(whichQuiz >=0 && whichQuiz < quizMarks.get(studentName).length){
 				if(newMark >= MIN_GRADE && newMark <= MAX_GRADE){
 					quizMarks.get(studentName)[whichQuiz] = newMark;
-				}
-			}
-		}
-	}
+				}else{
+					System.out.println("Try again the new mark - it should be over the minimum grade, under the maximum grade.");
+				} // else
+			}else{
+				System.out.println("Try again the which quiz");
+			} // else
+		}else{
+			System.out.println("Try again the student name");
+		} // else
+	} 
 	
 }
