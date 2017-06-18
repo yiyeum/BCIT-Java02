@@ -1,4 +1,5 @@
 import java.util.HashMap;
+import java.util.Map.Entry;
 
 /**
  * @author KateYeEumLee
@@ -40,11 +41,23 @@ public class StudentDatabase {
  * @param studentName The student name in String.
  */
 	public void addStudent(String studentName){
+		int marks[] = new int[NUM_QUIZZES];
+		
 		if(studentName != null && studentName.trim().length() > 1){
-			int marks[] = new int[NUM_QUIZZES];
+			formatName(studentName);
 			marks.equals(MIN_GRADE);
+			
 			quizMarks.put(studentName, marks);
 			
 		}
+	}
+	
+	public int[] getQuizzes(String studentName){
+		
+		if(studentName != null && studentName.trim().length() > 1){
+			formatName(studentName);
+			return quizMarks.get(studentName);
+		} // if
+		return null;
 	}
 }
