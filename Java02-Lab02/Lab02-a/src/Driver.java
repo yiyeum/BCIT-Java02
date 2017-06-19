@@ -34,7 +34,9 @@ public class Driver {
 		
 		//get quiz of just bean student.
 		System.out.println("The quiz mark of student, Bean :");
-		System.out.println(database.getQuizzes("BEAN"));
+	
+		int[] test = database.getQuizzes("BEAN");
+		database.showStudentMarks(test);
 		System.out.println("");
 		
 		//display all makrs of all students in database.

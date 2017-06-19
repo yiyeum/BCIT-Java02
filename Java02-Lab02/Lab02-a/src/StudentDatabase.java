@@ -46,9 +46,15 @@ public class StudentDatabase {
 		if(studentName != null && studentName.trim().length() > 1){
 			String formattedName = formatName(studentName);
 			
+			for(int i = 0; i < NUM_QUIZZES; i ++){
+				marks[i] = MIN_GRADE;
+			} // for
+			
 			quizMarks.put(formattedName, marks);
 			
-		}
+			
+			
+		} // if
 	}
 	
 	/**
@@ -97,9 +103,17 @@ public class StudentDatabase {
 			System.out.println("Quiz marks for " + s.getKey() + " : ");
 			
 			for(int i = 0; i < s.getValue().length; i++){
-				System.out.print(s.getValue()[i] + " / ");
+				System.out.print(s.getValue()[i] + " ");
 			}
-			System.out.println("");
+			System.out.println(" ");
 		}
 	}
+		
+		public void showStudentMarks(int[] test){
+
+			for(int i = 0; i < test.length; i++){
+				System.out.print(test[i] + " ");
+			}
+			
+		}
 }
