@@ -94,7 +94,7 @@ public class EmailInfo {
 	 */
 	public void listAll(){
 		for(Entry<String, String> s : addressBook.entrySet()){
-			System.out.println(s.getKey() + s.getValue());
+			System.out.println(s.getKey() + " : " + s.getValue());
 		} // for
 	}
 	
