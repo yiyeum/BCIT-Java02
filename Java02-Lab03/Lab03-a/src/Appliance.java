@@ -21,6 +21,24 @@ public class Appliance {
 		setWidth(width);
 	}
 
+	
+	/**
+	 * Overloaded Constructor
+	 * @param brand The brand of appliance
+	 * @param serialNumber The serial number of appliance.
+	 * @param height The height of interior.
+	 * @param depth The depth of interior.
+	 * @param width The width of interior.
+	 */
+	public Appliance(String brand, String serialNumber, double height, double depth, double width) {
+		this.brand = brand;
+		this.serialNumber = serialNumber;
+		this.height = height;
+		this.depth = depth;
+		this.width = width;
+	}
+
+
 	/**
 	 * Method to get the brand of appliance.
 	 * @return the brand as String.
