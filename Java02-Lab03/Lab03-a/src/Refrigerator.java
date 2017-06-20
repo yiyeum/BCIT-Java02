@@ -20,6 +20,7 @@ public class Refrigerator extends Appliance {
 	 * @param height The height of interior.
 	 * @param depth The depth of interior.
 	 * @param width The width of interior.
+	 * @param maximumColdnessDegrees The maximum coldness degrees of refrigerator. 
 	 */
 	public Refrigerator(String brand, String serialNumber, double height, double depth, double width, double maximumColdnessDegrees) {
 		super(brand, serialNumber, height, depth, width);
