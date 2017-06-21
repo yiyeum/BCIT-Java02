@@ -47,12 +47,14 @@ public class Student extends Person {
 	 */
 	public double calculateAverageGrade(){
 		double sum = 0;
+		double average = 0;
 		
 		if(courses.size() > 0){
 			for(Entry<String, Double> s : courses.entrySet()){
-				sum =+ s.getValue();
+				sum += s.getValue();
+				average = sum / courses.size();
 			}
-			return sum / courses.size();
+			return average;
 		}else{
 			return 0;
 		}
