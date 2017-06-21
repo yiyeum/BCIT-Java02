@@ -43,6 +43,11 @@ public class Driver {
 		System.out.println("");
 		System.out.println("Display all animals members in the hotel : ");
 		hotel.displayDetailOfAllAnimals();
+		System.out.println("");
 		
+		//print the detail of each animal.
+		myDog.print();
+		System.out.println("");
+		myCat.print();
 	}
 }
