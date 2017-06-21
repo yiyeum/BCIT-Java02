@@ -1,5 +1,3 @@
-import java.util.ArrayList;
-
 /**
  * @author KateYeEumLee
  * @version 3.2
@@ -9,7 +7,6 @@ public class Person {
 	private String lastName;
 	private String emailAddress;
 	private String schoolID;
-	private ArrayList<String> courses;
 	
 	/**
 	 * Default Constructor
@@ -103,14 +100,6 @@ public class Person {
 		if(schoolID != null && schoolID.trim().length() > 0){
 			this.schoolID = schoolID;
 		}
-	}
-
-	/**
-	 * Method to get the ArrayList of courses.
-	 * @return the courses as String.
-	 */
-	public ArrayList<String> getCourses() {
-		return courses;
 	}
 
 	
