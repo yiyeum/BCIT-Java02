@@ -42,8 +42,15 @@ public class Driver {
 		data.addPerson(student1);
 		data.addPerson(student2);
 		
-		System.out.println(student1.calculateAverageGrade());
-		System.out.println(student2.calculateAverageGrade());
+		//calculate the average grade
+		System.out.println("");
+		System.out.println("Student 1 average : " + student1.calculateAverageGrade());
+		System.out.println("Student 2 average : " + student2.calculateAverageGrade());
+		System.out.println("");
+		
+		//display detail of person in database.
+		System.out.println("Display the detail of person in database :");
+		data.displayDetailOfPerson();
 		
 	}
 }
