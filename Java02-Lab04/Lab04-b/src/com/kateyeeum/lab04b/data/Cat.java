@@ -45,6 +45,20 @@ public class Cat extends Animal {
 	public void setHunts(boolean hunts) {
 		this.hunts = hunts;
 	}
+	
+	/* (non-Javadoc)
+	 * @see com.kateyeeum.lab04b.data.Animal#print()
+	 */
+	@Override
+	public void print() {
+		// TODO Auto-generated method stub
+		super.print();
+		if(isHunts() == true){
+			System.out.println("This is a hunter!");
+		}else{
+			System.out.println("This is one lazy cat!");
+		}
+	}
 
 	/* (non-Javadoc)
 	 * @see java.lang.Object#toString()

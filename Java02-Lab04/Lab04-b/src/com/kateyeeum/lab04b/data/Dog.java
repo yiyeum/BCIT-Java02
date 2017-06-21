@@ -45,6 +45,20 @@ public class Dog extends Animal {
 	public void setLikeToWalk(boolean likeToWalk) {
 		this.likeToWalk = likeToWalk;
 	}
+	
+	/* (non-Javadoc)
+	 * @see com.kateyeeum.lab04b.data.Animal#print()
+	 */
+	@Override
+	public void print() {
+		// TODO Auto-generated method stub
+		super.print();
+		if(isLikeToWalk() == true){
+			System.out.println("This dog likes to walk.");
+		}else{
+			System.out.println("This is a lazy dog!");
+		}
+	}
 
 	/* (non-Javadoc)
 	 * @see java.lang.Object#toString()
