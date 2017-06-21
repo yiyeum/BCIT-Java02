@@ -66,7 +66,13 @@ public class Animal {
 		}
 	}
 
-
+	/**
+	 * Method to print the detail about animal.
+	 */
+	public void print(){
+		System.out.println("This is " + getBreed() + " weighing " + getWeight() + "Kilos.");
+	}
+	
 	/* (non-Javadoc)
 	 * @see java.lang.Object#toString()
 	 */
