@@ -41,7 +41,7 @@ public class Driver {
 		store.displayAppliance();
 		System.out.println("");
 		
-		//Test each of appliances
+		//Test method in Refrigerator.
 		System.out.println("The capacity of refrigerator :");
 		System.out.println(refrige.calculateCapacity());
 		System.out.println("");
