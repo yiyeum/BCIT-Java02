@@ -14,6 +14,7 @@ public abstract class Employee {
 	
 	/**
 	 * Overloaded Constructor
+	 * @param name The name of employee.
 	 */
 	public Employee(String name){
 		setName(name);
